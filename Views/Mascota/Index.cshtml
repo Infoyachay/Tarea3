@@ -1,0 +1,29 @@
+@model IEnumerable<Tarea3Brandon.Models.Mascota>
+@{
+    ViewData["Title"] = "Lista de Mascotas";
+}
+<h2>Lista de Mascotas</h2>
+<a href="/Mascota/Create">Registrar Nueva Mascota</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Propietario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mascota in Model)
+        {
+            <tr>
+                <td>@mascota.Nombre</td>
+                <td>@mascota.Especie</td>
+                <td>@mascota.Raza</td>
+                <td>@mascota.Edad</td>
+                <td>@mascota.Propietario</td>
+            </tr>
+        }
+    </tbody>
+</table>
